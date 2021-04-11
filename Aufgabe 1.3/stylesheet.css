@@ -1,0 +1,117 @@
+#body1{
+    margin: 0px;
+    background: url(media/bg.png);
+    text-align: center;
+    font-family: sans-serif;
+}
+#body2{
+    margin: 0px;
+    background: url(media/bg.png);
+    font-family: sans-serif;
+}
+#body3{
+    margin: 0px;
+    background: url(media/bg.png);
+    font-family: sans-serif;
+}
+.div1übermich {
+    text-align: center;
+}
+li {
+    list-style: none;
+}
+.socialmedialinks {
+    color: black;
+}
+#navibar {
+    height: 50px;
+    background-color: rgb(145, 137, 112);
+}
+#navlist {
+    float: right;
+}
+#navlist li {
+    display: inline-block;
+    
+}
+#navlist li a {
+    color: white;
+    text-decoration: none;
+}
+#navlist li a:hover {
+    color: chocolate;
+    text-decoration: underline;
+}
+
+#navlist li a strong {
+    color: brown;
+    text-decoration: underline;
+    text-decoration-color: brown;
+}
+#navlist li a strong:hover {
+    color:chocolate;
+}
+#loginbox {
+    color: black;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;    
+}
+h2 {
+    text-decoration: underline;
+   text-decoration-style: wavy; 
+}
+#yt {
+margin-top: 20px;
+margin-bottom: 200px;
+}
+#insta {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+#spotify {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.klick {
+    color: black;
+}
+#kontaktpicture {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.tabelleübermich1 thead tr th {
+    padding-left: 450px;
+}
+.tabelleübermich1 tbody td {
+    padding-left: 450px;
+
+}
+.tabelleübermich2 thead tr th {
+    padding-left: 450px;
+}
+.tabelleübermich2 tbody td {
+    padding-left: 450px;
+}
+.tabelleübermich3 thead tr th {
+    padding-left: 450px;
+}
+.tabelleübermich3 tbody td {
+    padding-left: 450px;    
+}
+#listeübermich1 {
+    padding-left: 450px;   
+}
+#strongübermich1 {
+    padding-left: 450px;
+}
+.tabellekontakt1 thead tr th {
+    padding-left: 360px;
+    
+}
+.tabellekontakt1 tbody tr td {
+    padding-left: 620px;
+
+}
