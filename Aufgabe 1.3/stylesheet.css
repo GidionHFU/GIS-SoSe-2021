@@ -107,6 +107,10 @@ margin-bottom: 200px;
     display: flex;
  justify-content: center;
 }
+.icon {
+    display: flex;
+    justify-content: center;
+}
 .icon a:hover {
     background: url(Media/facebook.png);
 }
