@@ -1,18 +1,21 @@
 #body1{
     margin: 0px;
-    background: url(media/bg.png);
+    background: url(Media/bg.png);
     text-align: center;
     font-family: sans-serif;
+
 }
 #body2{
     margin: 0px;
-    background: url(media/bg.png);
-    font-family: sans-serif;
+    background: url(Media/bg.png);
+    font-family: sans-serif; 
+
 }
 #body3{
     margin: 0px;
-    background: url(media/bg.png);
+    background: url(Media/bg.png);
     font-family: sans-serif;
+
 }
 .div1übermich {
     text-align: center;
@@ -86,36 +89,24 @@ margin-bottom: 200px;
     margin-top: 25px;
     margin-bottom: 50px;
 }
-.tabelleübermich1 thead tr th {
-    padding-left: 450px;
-}
-.tabelleübermich1 tbody td {
-    padding-left: 450px;
-
-}
-.tabelleübermich2 thead tr th {
-    padding-left: 450px;
-}
-.tabelleübermich2 tbody td {
-    padding-left: 450px;
-}
-.tabelleübermich3 thead tr th {
-    padding-left: 450px;
-}
-.tabelleübermich3 tbody td {
-    padding-left: 450px;    
-}
-#listeübermich1 {
-    padding-left: 450px;   
-}
-#strongübermich1 {
-    padding-left: 450px;
-}
 .tabellekontakt1 thead tr th {
-    padding-left: 360px;
+    padding-left: 60px;
     
 }
 .tabellekontakt1 tbody tr td {
-    padding-left: 620px;
-
+    padding-left: 220px;
+}
+.breite {
+    width: 800px;
+    margin: auto;
+}
+.header {
+    margin-top: 40px;
+}
+#bildindex1 {
+    display: flex;
+ justify-content: center;
+}
+.icon a:hover {
+    background: url(Media/facebook1.png);
 }
