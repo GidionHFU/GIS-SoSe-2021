@@ -185,7 +185,7 @@ video {
     #main 
 }
 @media screen and (max-width:800px) {
-    }
+        
     .breite {
         width:auto;
     }
@@ -209,6 +209,9 @@ video {
     }
     #bildindex1 {
         padding-top: 90px;  
+      }
+      #übermmichbild {
+          position: relative;
       }
 }
 @media screen and (max-width:550px) {
