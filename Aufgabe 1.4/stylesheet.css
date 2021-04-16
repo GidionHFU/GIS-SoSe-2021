@@ -105,7 +105,17 @@ margin-top: 20px;
 #übermichbild {
     margin-top: 25px;
     margin-bottom: 50px;
-}
+    animation-name: bild-bewegen;
+    animation-duration: 2s;
+   }
+   @keyframes bild-bewegen {
+       from {
+           top: -50px;
+       }
+       to {
+       top: 0;
+       }
+   }
 .tabellekontakt1 thead tr th {
     padding-left: 60px;
     
@@ -123,13 +133,7 @@ margin-top: 20px;
 #bildindex1 {
     display: flex;
  justify-content: center;
-}
-.icon {
-    display: flex;
-    justify-content: center;
-}
-.icon img:hover {
-    background:;
+ padding-top: 50px;
 }
 #navibar2 {
     height: 50px;
@@ -167,24 +171,21 @@ border-radius: 5px;
 }
 .icon:hover {
     transform:scale(1.5, 1.5)
-}
-.icon {
-    width: fit-content;
-    margin: auto;
-}
-
+} 
 img {
     max-width: 100%;
 }
 video {
     max-width: 100%;
 }
-/*mobile*/
+
+  }
+/* media queries  */
 @media screen and (max-width:1024px) {
     #main 
 }
 @media screen and (max-width:800px) {
-        
+    }
     .breite {
         width:auto;
     }
@@ -211,14 +212,22 @@ video {
       }
 }
 @media screen and (max-width:550px) {
+    #body1{
+        font-size: large;
     
+    }
+    #body2{
+        font-size: large;
+    
+    }
+    #body3{
+        font-size: large;
+    }
     .breite {
         width:400px;
     }
     #navlist li {
-        display:list-item;
-        font-size: large;
-        
+        display:list-item;   
     }
     #navibar {
         height: 100px;
@@ -226,6 +235,7 @@ video {
         background-color: rgb(145, 137, 112);
         position: fixed;
     }
+
     #navlist {
         float: left;   
     }
@@ -240,4 +250,19 @@ video {
     }
 .tabellekontakt1 {
     margin: auto;}
+    
+    #werke {
+        margin-top: 100px;
+    }
+    #yt {
+    margin-top: 10px;
+    }
+    #insta {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    #spotify {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 }
