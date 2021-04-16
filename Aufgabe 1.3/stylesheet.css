@@ -28,10 +28,14 @@ li {
 }
 #navibar {
     height: 50px;
+    width: 100%;
     background-color: rgb(145, 137, 112);
+    position: fixed;
 }
 #navlist {
     float: right;
+    
+    
 }
 #navlist li {
     display: inline-block;
@@ -65,9 +69,11 @@ h2 {
     text-decoration: underline;
    text-decoration-style: wavy; 
 }
+#werke {
+    margin-top: 200px;
+}
 #yt {
 margin-top: 20px;
-margin-bottom: 200px;
 }
 #insta {
     margin-top: 200px;
