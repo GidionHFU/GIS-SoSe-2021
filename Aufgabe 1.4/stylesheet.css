@@ -46,9 +46,6 @@ li {
     display: inline-block;
     
 }
-#navlist li img {
-    display: none;
-}
 #navlist li a {
     color: white;
     text-decoration: none;
@@ -72,13 +69,16 @@ li {
 #loginbox {
     color: black;
 }
-h1 {
+div > h1 {
     text-align: center;
     text-decoration: underline;    
 }
 h2 {
     text-decoration: underline;
    text-decoration-style: wavy; 
+}
+#inspos * {
+    text-decoration: underline ;
 }
 #werke {
     margin-top: 200px;
@@ -97,7 +97,7 @@ margin-top: 20px;
 .klick {
     color: black;
 }
-#kontaktpicture {
+img [src="Media/Themenbanner_HP_Kontakt.jpg"] {
     text-align: center;
     margin-top: 25px;
     margin-bottom: 50px;
@@ -116,13 +116,6 @@ margin-top: 20px;
        top: 0;
        }
    }
-.tabellekontakt1 thead tr th {
-    padding-left: 60px;
-    
-}
-.tabellekontakt1 tbody tr td {
-    padding-left: 220px;
-}
 .breite {
     width: 800px;
     margin: auto;
