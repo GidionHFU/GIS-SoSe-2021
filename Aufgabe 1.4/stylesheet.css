@@ -10,14 +10,16 @@
     margin: 0px;
     background: url(Media/bg.png);
     font-family: sans-serif;
-    font-weight: 100; 
+    font-weight: 100;
+    text-align: center; 
 
 }
 #body3{
     margin: 0px;
     background: url(Media/bg.png);
     font-family: sans-serif;
-    font-weight: 100; 
+    font-weight: 100;
+    text-align: center; 
 
 }
 .div1übermich {
@@ -135,6 +137,42 @@ margin-top: 20px;
     background-color: rgb(145, 137, 112);   
     
 }
+#loginbox {
+box-shadow: 0 15px 35px white;
+background-color: white;
+border-radius: 5px;
+}
+.label {
+    margin-bottom: 1em;
+    transition: all 0.3s;
+}
+.labelinside {
+    display: block;
+    transition: all 0.3s;
+}
+.controll {
+    
+    transition: all 0.5s;
+}
+.controll::placeholder {
+    color: transparent;
+}
+.controll:focus{
+    box-shadow: none;
+    outline: none;
+    border-color: chocolate; 
+}
+.label:focus-within {
+    transform:scale(1.1, 1.1);
+}
+.icon:hover {
+    transform:scale(1.5, 1.5)
+}
+.icon {
+    width: fit-content;
+    margin: auto;
+}
+
 img {
     max-width: 100%;
 }
@@ -146,12 +184,9 @@ video {
     #main 
 }
 @media screen and (max-width:800px) {
-    #main 
-}
-@media screen and (max-width:550px) {
-    
+        
     .breite {
-        width:400px;
+        width:auto;
     }
     #navlist li {
         display:list-item;
@@ -172,12 +207,37 @@ video {
         display: inline-table;
     }
     #bildindex1 {
+        padding-top: 90px;  
+      }
+}
+@media screen and (max-width:550px) {
+    
+    .breite {
+        width:400px;
     }
-    #body1{
-        margin: 0px;
-        background-image: url(Media/bg.png);
-        text-align: center;
-        font-family: sans-serif;
-        font-weight: 100;
-        font-size: 100%;
+    #navlist li {
+        display:list-item;
+        font-size: large;
+        
+    }
+    #navibar {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(145, 137, 112);
+        position: fixed;
+    }
+    #navlist {
+        float: left;   
+    }
+    #navlist li strong {
+        display: none;
+    }
+    #navlist li a strong {
+        display: inline-table;
+    }
+    #bildindex1 {
+      padding-top: 90px;  
+    }
+.tabellekontakt1 {
+    margin: auto;}
 }
