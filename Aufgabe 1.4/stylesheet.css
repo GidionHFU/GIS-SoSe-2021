@@ -123,6 +123,22 @@ img [src="Media/Themenbanner_HP_Kontakt.jpg"] {
        top: 0;
        }
    }
+.icon {
+    animation-name: icon-bewegen;
+    animation-duration: 2s;
+    position: relative;
+   }
+   @keyframes icon-bewegen {
+       from {
+           left: -50px;
+           
+       }
+       to {
+       left: 0;
+       
+       }
+   }
+}
 .breite {
     width: 800px;
     margin: auto;
