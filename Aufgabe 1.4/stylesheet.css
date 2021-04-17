@@ -179,28 +179,38 @@ video {
 }
 
 /* media queries  */
-@media screen and (max-width:1024px) {
-    #main 
+@media screen and (max-width:1000px) {
+    .breite {
+        width: auto;}
+#navlist * {
+    font-size: large;
+
+}
 }
 @media screen and (max-width:800px) {
-        
+    #body1{
+        font-size: 120%;
+    
+    }
+    #body2{
+        font-size: 120%;
+    
+    }
+    #body3{
+        font-size: 120%;
+    }   
     .breite {
         width:auto;
     }
-    #navlist li {
-        display:list-item;
+    #navlist * {
+        display: inline;
+        font-size: 110%;
     }
     #navibar {
         height: 100px;
         width: 100%;
         background-color: rgb(145, 137, 112);
         position: fixed;
-    }
-    #navlist {
-        float: left;   
-    }
-    #navlist li strong {
-        display: none;
     }
     #navlist li a strong {
         display: inline-table;
@@ -211,31 +221,31 @@ video {
 }
 @media screen and (max-width:550px) {
     #body1{
-        font-size: large;
+        font-size: larger;
     
     }
     #body2{
-        font-size: large;
+        font-size: larger;
     
     }
     #body3{
-        font-size: large;
+        font-size: larger;
     }
     .breite {
-        width:400px;
+        width:auto;
     }
     #navlist li {
-        display:list-item;   
+        display:flex; 
+    }
+    #navlist li a{
+        display:flex; 
+        font-size: 90%;
     }
     #navibar {
         height: 100px;
         width: 100%;
         background-color: rgb(145, 137, 112);
         position: fixed;
-    }
-
-    #navlist {
-        float: left;   
     }
     #navlist li strong {
         display: none;
@@ -262,5 +272,8 @@ video {
     #spotify {
         margin-top: 100px;
         margin-bottom: 100px;
+    }
+    #navlist {
+        float: left;   
     }
 }
