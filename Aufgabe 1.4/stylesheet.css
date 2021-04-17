@@ -25,6 +25,10 @@
 .div1übermich {
     text-align: center;
 }
+table {
+margin-left:auto;margin-right:auto;
+border:1px solid  rgb(145, 137, 112)
+}
 li {
     list-style: none;
 }
@@ -79,6 +83,8 @@ h2 {
 }
 #inspos * {
     text-decoration: underline ;
+    text-align:center;
+    width:95%;;
 }
 #werke {
     margin-top: 200px;
@@ -107,6 +113,7 @@ img [src="Media/Themenbanner_HP_Kontakt.jpg"] {
     margin-bottom: 50px;
     animation-name: bild-bewegen;
     animation-duration: 2s;
+    position: relative;
    }
    @keyframes bild-bewegen {
        from {
@@ -135,12 +142,11 @@ img [src="Media/Themenbanner_HP_Kontakt.jpg"] {
     
 }
 #loginbox {
-box-shadow: 0 15px 35px white;
-background-color: white;
-border-radius: 5px;
+background-image: url(Media/bg.png);
+border-radius: 10px;
 }
 .label {
-    margin-bottom: 1em;
+    margin-bottom: 5px;
     transition: all 0.3s;
 }
 .labelinside {
@@ -172,7 +178,6 @@ video {
     max-width: 100%;
 }
 
-  }
 /* media queries  */
 @media screen and (max-width:1024px) {
     #main 
@@ -202,9 +207,6 @@ video {
     }
     #bildindex1 {
         padding-top: 90px;  
-      }
-      #übermmichbild {
-          position: relative;
       }
 }
 @media screen and (max-width:550px) {
