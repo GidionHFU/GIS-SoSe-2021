@@ -179,11 +179,40 @@ video {
 }
 
 /* media queries  */
+@media screen and (max-width:1024px) {
+    .breite {
+        width: auto;}
+#navlist * {
+    font-size: large
+}
+    #body1{
+        font-size: 120%;
+    
+    }
+    #body2{
+        font-size: 120%;
+    
+    }
+    #body3{
+        font-size: 120%;
+    } 
 @media screen and (max-width:1000px) {
     .breite {
         width: auto;}
 #navlist * {
-    font-size: large;
+    font-size: large
+}
+    #body1{
+        font-size: 120%;
+    
+    }
+    #body2{
+        font-size: 120%;
+    
+    }
+    #body3{
+        font-size: 120%;
+    } 
 
 }
 }
