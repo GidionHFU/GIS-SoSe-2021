@@ -1,60 +1,40 @@
 "use strict";
-/* // Aufgabe 1:
-function a1(): void {
-    let x: string = "Alles";
-    func2(x);
-    func1(x);
-    func3(x);
+// Aufgabe 1:
+function a1() {
+    let x = "Alles";
+    func12(x);
+    func11(x);
+    func13(x);
 }
-
 a1();
-
-function func1(x: string): void {
-    
+function func11(x) {
     console.log(x + " klar?");
 }
-function func2(x: string): void {
+function func12(x) {
     console.log(x + " Gute!");
 }
-function func3(x: string): void {
+function func13(x) {
     console.log(x + " Logo!");
 }
-
 //Aufgabe1 Kommentar
 //So habe ich die Aufgabe verstanden bin davon ausgegangen dass immer die zwei Wörter in einer Zeile sein müssen.
 //a/b) Soweit nachvollziebar, es gab keine Überraschung
-
-
-
-
-
-
-
 // Aufgabe 2:
-debugger;
-function a2(): void {
-    let i: number = 9;
-
+function a2() {
+    let i = 9;
     do {
         console.log(i);
         i = i - 1;
-    } while( i > 0);
+    } while (i > 0);
 }
-
 a2();
-
 //Aufgabe2 Kommentar
 // Es entsteht eine Schleife welche die Zahlen rückwärts runterzählt bis i nicht mehr > 0 ist
-
-
-
-
-
-
+/*
 
 
 // Aufgabe 3:
-function a1(): void {
+function a3(): void {
     let x: string = "Alles";
     func2();
     func1(x);
@@ -110,18 +90,18 @@ function func3() {
 //da man auf die Werte der Funktion im gesammten programm zugreifen kann
 //Aufgabe 5:
 //a)
-function multiply(Zahl1, Zahl2) {
-    let x = Zahl1 * Zahl2;
+function multiply(_Zahl1, _Zahl2) {
+    let x = _Zahl1 * _Zahl2;
     return x;
 }
 console.log(multiply(3, 4));
 //b)
-function max(Zahl1, Zahl2) {
-    if (Zahl1 >= Zahl2) {
-        return Zahl1;
+function max(_Zahl1, _Zahl2) {
+    if (_Zahl1 >= _Zahl2) {
+        return _Zahl1;
     }
     else
-        return Zahl2;
+        return _Zahl2;
 }
 console.log(max(2, 7));
 console.log(max(23, 7));
@@ -136,7 +116,7 @@ function EinsBisHundert() {
         i = i + random;
         counter = counter + 1;
     } while (counter < 100);
-    if (counter = 100) {
+    if (counter == 100) {
         console.log(i);
     }
 }
@@ -241,4 +221,37 @@ function FizzBuzz2() {
 }
 FizzBuzz2();
 //d)
+function schachbrett() {
+    let felder = "";
+    for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+            if ((i + j) % 2 == 0) {
+                felder = felder + " ";
+                continue;
+            }
+            felder = felder + "#";
+            continue;
+        }
+        felder = felder + "\n";
+    }
+    return felder;
+}
+console.log(schachbrett());
+//e)
+function schachbrett2(_höhe, _breite) {
+    let felder = "";
+    for (let i = 0; i < _höhe; i++) {
+        for (let j = 0; j < _breite; j++) {
+            if ((i + j) % 2 == 0) {
+                felder = felder + " ";
+                continue;
+            }
+            felder = felder + "#";
+            continue;
+        }
+        felder = felder + "\n";
+    }
+    return felder;
+}
+console.log(schachbrett2(7, 13));
 //# sourceMappingURL=Aufgabe1.js.map
