@@ -155,6 +155,7 @@ console.log(split(1, 4, arr2));
 
 // Aufgabe 3
 
+//a)
 let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas");
 let ctx: CanvasRenderingContext2D = canvas.getContext("2d");
 ctx.globalCompositeOperation = "destination-over";
@@ -218,8 +219,8 @@ ctx.fillRect(1, 111, 454, 290);
 
 
 
-//b)
-interface Rechteck {
+//b, c, d, e)
+interface Rechteck { // Alle wichtigen Parameter sind vorhanden
     x: number;
     y: number;
     breite: number;
@@ -236,11 +237,11 @@ function getRandomZahl2(): number {
     return rdmzahl;
 } 
 
-function createRect(): Rechteck {
+function createRect(): Rechteck { // Durch die zufällige Zahl werden die Werte zufällig generiert
     let _RdmRechteck: Rechteck = {länge: getRandomZahl2() , breite : getRandomZahl2() , x : getRandomZahl() , y : getRandomZahl() } ;
     return _RdmRechteck;
 }   
-function drawRect (_Rechteck: Rechteck): void {
+function drawRect (_Rechteck: Rechteck): void { // Die + 200 dienen nur dazu dass man die Rechtecke besser erkennen kann und sie nicht alle aufeinander liegen
     let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("canvas2");
     let ctx2: CanvasRenderingContext2D = canvas.getContext("2d");
     ctx2.fillRect(_Rechteck.x + 200, _Rechteck.y + 200, _Rechteck.breite, _Rechteck.länge);
