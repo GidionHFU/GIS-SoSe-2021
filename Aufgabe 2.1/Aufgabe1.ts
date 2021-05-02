@@ -154,7 +154,7 @@ EinsBisHundert();
 
 
 //d)
-function getRandomZahl(): void {
+function getRandomZahlOG(): void {
     for (let i: number = 0; i <= 10; i++)
     console.log(Math.random() * (100)) ;
   }

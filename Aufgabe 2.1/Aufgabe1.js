@@ -122,7 +122,7 @@ function EinsBisHundert() {
 }
 EinsBisHundert();
 //d)
-function getRandomZahl() {
+function getRandomZahlOG() {
     for (let i = 0; i <= 10; i++)
         console.log(Math.random() * (100));
 }
