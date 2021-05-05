@@ -34,6 +34,24 @@ function iseven(_n: number): boolean { // Ich hoffe mal die Aufgabe stimmt so, s
 console.log(iseven(50));
 console.log(iseven(75));
 
+
+function isevenrekursiv(_n: number): boolean { // Ich hoffe mal die Aufgabe stimmt so, so habe ich sie zumindest verstanden.
+    let gerade: boolean = true;
+    if (_n < 0) {
+        return false;
+    }
+    if (_n == 0 || _n == 1) {
+            if (_n == 0) {
+                return gerade;
+            } else {
+                gerade = false;
+                return gerade;
+            }
+        } 
+        else return isevenrekursiv(_n - 2);
+}
+console.log(isevenrekursiv(8));
+console.log(isevenrekursiv(7));
 //c
 interface Student {
     vorname: string;

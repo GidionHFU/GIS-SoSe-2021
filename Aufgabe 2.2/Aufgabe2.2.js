@@ -33,6 +33,25 @@ function iseven(_n) {
 }
 console.log(iseven(50));
 console.log(iseven(75));
+function isevenrekursiv(_n) {
+    let gerade = true;
+    if (_n < 0) {
+        return false;
+    }
+    if (_n == 0 || _n == 1) {
+        if (_n == 0) {
+            return gerade;
+        }
+        else {
+            gerade = false;
+            return gerade;
+        }
+    }
+    else
+        return isevenrekursiv(_n - 2);
+}
+console.log(isevenrekursiv(8));
+console.log(isevenrekursiv(7));
 function Studenterstellen() {
     let _LeererStudent = { vorname: "leer", nachname: "leer", alter: null, matrikelnummer: null, studiengang: "leer" };
     return _LeererStudent;
@@ -124,6 +143,7 @@ function split(_index1, _index2, _arr) {
 let arr2 = [5, 42, 17, 2018, -10, 60, -10010];
 console.log(split(1, 4, arr2));
 // Aufgabe 3
+//a)
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 ctx.globalCompositeOperation = "destination-over";
