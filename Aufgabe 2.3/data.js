@@ -1,4 +1,26 @@
 "use strict";
+let alleteig = [];
+let teigvegan = {
+    vegan: true,
+    normal: false,
+    protein: false,
+    preisTeig: 2.0
+};
+alleteig.push(teigvegan);
+let teignormal = {
+    vegan: false,
+    normal: true,
+    protein: false,
+    preisTeig: 2.0
+};
+alleteig.push(teignormal);
+let teigprotein = {
+    vegan: false,
+    normal: false,
+    protein: true,
+    preisTeig: 2.0
+};
+alleteig.push(teigprotein);
 //Soßen
 let allesoßen = [];
 let ohnesoße = {
@@ -14,7 +36,7 @@ let ohnesoße = {
     preisprosoße: 0
 };
 allesoßen.push(ohnesoße);
-let früchtesoßen = {
+let früchtesoße = {
     vanillesoße: false,
     schokolade: false,
     vollmilch: false,
@@ -26,7 +48,7 @@ let früchtesoßen = {
     karamelsoße: false,
     preisprosoße: 1.50
 };
-allesoßen.push(früchtesoßen);
+allesoßen.push(früchtesoße);
 let schokokaramellsoße = {
     vanillesoße: false,
     schokolade: true,
