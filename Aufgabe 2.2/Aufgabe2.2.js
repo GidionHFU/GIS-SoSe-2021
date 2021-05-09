@@ -200,11 +200,11 @@ ctx.fillStyle = "rgb(0,191,255)";
 ctx.fillRect(1, 1, 454, 110);
 ctx.fillStyle = "green";
 ctx.fillRect(1, 111, 454, 290);
-function getRandomZahl() {
+function getRandomZahl1() {
     let rdmzahl = (Math.random() * (600));
     return rdmzahl;
 }
-function getRandomZahl2() {
+function getRandomZahl21() {
     let rdmzahl = (Math.random() * (100));
     return rdmzahl;
 }

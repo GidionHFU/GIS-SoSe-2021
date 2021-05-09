@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(255, 255, 255) ;
+    margin: 0px;
+}
+#überschrift {
+    background-color: rgb(3, 77, 31);
+    width: auto;
+    height: 120px;
+    box-sizing: border-box;
+    margin-top: -20px;
+    border-radius: 0px 0px 30px 30px;
+}
+#logo {
+    height: 130px;
+    float: left;
+    margin-top: -10px;
+}
+#überschrifttext {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+#logo2 {
+    float: right;
+    margin-top: -165px;
+}
+#linkteigauswahl {
+    text-align: center;
+}
+#button {
+    width: 200px;
+    margin-top: 300px;
+    
+}
+#klickehier {
+    text-align: center;
+    margin-right: 170px;
+    margin-top: -110px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+#neustart {
+    background-color: rgb(202, 32, 32);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 30px 30px 30px 30px;
+}

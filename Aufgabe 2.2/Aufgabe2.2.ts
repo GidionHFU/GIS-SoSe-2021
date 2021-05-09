@@ -245,12 +245,12 @@ interface Rechteck { // Alle wichtigen Parameter sind vorhanden
     länge: number;
 }
 
-function getRandomZahl(): number {
+function getRandomZahl1(): number {
     let rdmzahl: number = (Math.random() * (600));
     return rdmzahl;
 }
 
-function getRandomZahl2(): number {
+function getRandomZahl21(): number {
     let rdmzahl: number = (Math.random() * (100));
     return rdmzahl;
 } 
