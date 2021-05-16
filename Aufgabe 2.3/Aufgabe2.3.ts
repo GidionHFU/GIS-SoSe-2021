@@ -17,25 +17,27 @@ function getRandomZahl2(): number {
 }
 
 
+
 function drawdivrect(): void {
     let _DivRect: DivRect = { länge: getRandomZahl2(), breite: getRandomZahl2(), farbe: "rgb(" + getRandomZahl2() + ", " + getRandomZahl2() + ", " + getRandomZahl2() + ")", margin: getRandomZahl2() };
     let newdiv: HTMLDivElement = document.createElement("div");
-    newdiv.id = "DivRect";
+    newdiv.className = "DivRect";
     newdiv.style.width = _DivRect.breite.toString() + "px";
     newdiv.style.height = _DivRect.länge.toString() + "px";
     newdiv.style.background = _DivRect.farbe;
     newdiv.style.margin = _DivRect.margin.toString() + "px";
     document.body.appendChild(newdiv);
+    
 }
 
 function removedivrect(): void {
-    document.querySelectorAll("#DivRect").forEach(el => el.remove());
+    document.querySelectorAll(".DivRect").forEach(el => el.remove());
     
 }
 
 
 let button1: HTMLDivElement = document.createElement("div");
-button1.id = "Button1";
+button1.className = "Button1";
 button1.style.width = "200px";
 button1.style.height = "30px";
 button1.style.background = "grey";
@@ -47,7 +49,7 @@ button1.addEventListener("click", drawdivrect);
 
 
 let button2: HTMLDivElement = document.createElement("div");
-button2.id = "Button1";
+button2.className = "Button1";
 button2.style.width = "200px";
 button2.style.height = "30px";
 button2.style.background = "grey";
@@ -57,5 +59,5 @@ document.body.appendChild(button2);
 button2.innerHTML = "Lösche alle Rechtecke";
 button2.addEventListener("click", removedivrect);
 
-
+//Verbesserung1: Id in Class umgeändert!
 

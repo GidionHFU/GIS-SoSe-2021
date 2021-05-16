@@ -1,5 +1,4 @@
-"use strict";
-/*/Aufgabe 2
+//Aufgabe 2
 interface Endprodukt { //b) Hier ist das Interface welches alle Ausgewählten Elemente speichert
     Waffel: Teig;
     Soßen: Soßen[];
@@ -10,25 +9,30 @@ interface Endprodukt { //b) Hier ist das Interface welches alle Ausgewählten El
 }
 interface Teig { //a) Klassen welche alle wichtigen Wahlmöglichkeiten haben
 
-    waffelart: string;
+    art: string;
     preis: number;
 }
 interface Soßen {
-    soßenart: string;
+    art: string;
     preis: number;
 }
 interface Früchte {
-    früchteart: string;
+    eart: string;
     preis: number;
 }
 interface Topping {
-    toppingart: string;
+    art: string;
     preis: number;
 }
 interface Eis {
-    eisart: string;
+    art: string;
     preis: number;
 }
 
-*/ 
-//# sourceMappingURL=Kapitelaufgabe2.3.js.map
+interface Allemöglichkeiten {
+    teig: Teig [];
+    soßen: Soßen [];
+    früchte: Früchte [];
+    topping: Topping[];
+    eis: Eis [];
+}
