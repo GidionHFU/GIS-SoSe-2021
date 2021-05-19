@@ -89,7 +89,7 @@ function reset(): void {
     let neustart: HTMLDivElement = <HTMLDivElement>document.getElementById("neustart");
     if (document.querySelector("title").getAttribute("id") === "Page1") {
         neustart.addEventListener("click", function (_event: Event): void {
-            location.href = "Kapitelaufgabe2.4.html";
+            location.href = "index.html";
             localStorage.clear();
         });
     }
