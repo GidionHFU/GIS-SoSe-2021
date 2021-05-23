@@ -1,5 +1,4 @@
-"use strict";
-/*
+
 function jsonladen(): Allemöglichkeiten { //1a json konvertieren
     let rückgabe: Allemöglichkeiten = JSON.parse(jsonconvert);
     return rückgabe;
@@ -174,5 +173,3 @@ if ((document.querySelector("title").getAttribute("id") === "Page6")) {
     divauswahl.appendChild(divvorhanden);
 
 }
-*/ 
-//# sourceMappingURL=script.js.map

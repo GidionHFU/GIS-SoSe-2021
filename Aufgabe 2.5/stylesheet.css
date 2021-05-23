@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(255, 255, 255) ;
+    margin: 0px;
+}
+#überschrift {
+    background-color: rgb(3, 77, 31);
+    width: auto;
+    height: 120px;
+    box-sizing: border-box;
+    margin-top: -20px;
+    border-radius: 0px 0px 30px 30px;
+}
+#logo {
+    height: 130px;
+    float: left;
+    margin-top: -10px;
+}
+#überschrifttext {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+#logo2 {
+    float: right;
+    margin-top: -165px;
+}
+#linkteigauswahl {
+    text-align: center;
+}
+#button {
+    width: 200px;
+    margin-top: 300px;
+    
+}
+#klickehier {
+    text-align: center;
+    margin-right: 180px;
+    margin-top: -110px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+#neustart {
+    background-color: rgb(202, 32, 32);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 30px 30px 30px 30px;
+}
+#auswahl, #ausgewählt, #klickehier {
+    text-align: center;
+    margin: 6px;
+    padding: 100px;
+}
+.weiteraußen {
+    text-align: center;
+    margin: 6px;
+    padding: 20px;
+}
+.Waffel, .Waffel2 , #buttonhtml {
+    background-color: rgb(202, 32, 32);
+    box-sizing: border-box;
+    display: inline-block;
+    width: 250px;
+    border-radius: 30px 30px 30px 30px;
+}
+.Waffel button {
+    background-color: rosybrown;
+    width: 200px;
+    align-self: center;
+    border-radius:40px 40px 40px 40px;
+}
+.Waffel p {
+    text-align: center;
+}
+
+#Weiter {
+    background-color: grey;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 250px;
+    border-radius: 30px 30px 30px 30px;
+    
+}
+#Weiter p {
+    text-align: center;
+    
+}
+#waffelpic{
+    display: flex;
+    justify-content: center;
+    margin-left: 160px;
+}
