@@ -57,7 +57,7 @@ a {
 #auswahl, #ausgewählt, #klickehier {
     text-align: center;
     margin: 6px;
-    padding: 100px;
+    padding: 50px;
 }
 .weiteraußen {
     text-align: center;
@@ -106,4 +106,7 @@ a {
 }
 .rückgabeschlecht{
     color: red;
+}
+#serverantwort {
+    text-align: center;
 }

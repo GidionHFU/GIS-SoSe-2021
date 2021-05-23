@@ -15,18 +15,19 @@ async function serverantwort(_url: RequestInfo): Promise<void> { //c)
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort: Response = await fetch(_url);
     let rückgabe: Serverobj = await antwort.json();
-    let antwortparagraph: HTMLParagraphElement = <HTMLParagraphElement> document.getElementById("serverrückgabe");
+    let antwortparagraph: HTMLParagraphElement = document.createElement("p");
 
 
-    if (rückgabe.error) { 
-        antwortparagraph.classList.add("rückgabeschlecht");
+    if (rückgabe.error) {
         antwortparagraph.innerText = rückgabe.error;
+        antwortparagraph.classList.add("rückgabeschlecht");
     }
     else {
-        antwortparagraph.classList.add("rückgabegut");
         antwortparagraph.innerText = rückgabe.message;
+        antwortparagraph.classList.add("rückgabegut");
     }
 
+    document.getElementById("serverantwort").appendChild(antwortparagraph);
 }
 
 serverantwort("https://gis-communication.herokuapp.com");

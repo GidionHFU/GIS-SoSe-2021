@@ -13,15 +13,16 @@ async function serverantwort(_url) {
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort = await fetch(_url);
     let rückgabe = await antwort.json();
-    let antwortparagraph = document.getElementById("serverrückgabe");
+    let antwortparagraph = document.createElement("p");
     if (rückgabe.error) {
-        antwortparagraph.classList.add("rückgabeschlecht");
         antwortparagraph.innerText = rückgabe.error;
+        antwortparagraph.classList.add("rückgabeschlecht");
     }
     else {
-        antwortparagraph.classList.add("rückgabegut");
         antwortparagraph.innerText = rückgabe.message;
+        antwortparagraph.classList.add("rückgabegut");
     }
+    document.getElementById("serverantwort").appendChild(antwortparagraph);
 }
 serverantwort("https://gis-communication.herokuapp.com");
 function waffeldiv(_auswahl) {
