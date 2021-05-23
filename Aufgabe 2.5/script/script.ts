@@ -8,15 +8,13 @@ async function jsonladen(_url: RequestInfo): Promise<void> { //json wird von der
 
 jsonladen("https://gidionhfu.github.io/GIS-SoSe-2021/Aufgabe%202.5/data.json");
 
-
 async function serverantwort(_url: RequestInfo): Promise<void> { //c) 
     let query: URLSearchParams = new URLSearchParams(sessionStorage);
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort: Response = await fetch(_url);
     let rückgabe: Serverobj = await antwort.json();
-    let antwortparagraph: HTMLParagraphElement = document.createElement("p");
-
+    let antwortparagraph: HTMLDivElement = document.createElement("div");
 
     if (rückgabe.error) {
         antwortparagraph.innerText = rückgabe.error;
@@ -26,11 +24,8 @@ async function serverantwort(_url: RequestInfo): Promise<void> { //c)
         antwortparagraph.innerText = rückgabe.message;
         antwortparagraph.classList.add("rückgabegut");
     }
-
-    document.getElementById("serverantwort").appendChild(antwortparagraph);
+    document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
-
-serverantwort("https://gis-communication.herokuapp.com");
 
 
 function waffeldiv(_auswahl: any): HTMLDivElement {
@@ -213,6 +208,8 @@ if ((document.querySelector("title").getAttribute("id") === "Page6")) {
         parseFloat(sessionStorage.getItem("preis4")) + "€" + " \n " + sessionStorage.getItem("art5") + " " +
         parseFloat(sessionStorage.getItem("preis4")) + "€" + "\n" + " _____________________" + "\n" + gesammt + "€";
     divauswahl.appendChild(divvorhanden);
-
+    serverantwort("https://gis-communication.herokuapp.com");
 }
+
+
 

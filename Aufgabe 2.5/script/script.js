@@ -13,7 +13,7 @@ async function serverantwort(_url) {
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort = await fetch(_url);
     let rückgabe = await antwort.json();
-    let antwortparagraph = document.createElement("p");
+    let antwortparagraph = document.createElement("div");
     if (rückgabe.error) {
         antwortparagraph.innerText = rückgabe.error;
         antwortparagraph.classList.add("rückgabeschlecht");
@@ -22,9 +22,8 @@ async function serverantwort(_url) {
         antwortparagraph.innerText = rückgabe.message;
         antwortparagraph.classList.add("rückgabegut");
     }
-    document.getElementById("serverantwort").appendChild(antwortparagraph);
+    document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
-serverantwort("https://gis-communication.herokuapp.com");
 function waffeldiv(_auswahl) {
     let divwaffel = document.createElement("div");
     divwaffel.classList.add("Waffel");
@@ -173,5 +172,6 @@ if ((document.querySelector("title").getAttribute("id") === "Page6")) {
         parseFloat(sessionStorage.getItem("preis4")) + "€" + " \n " + sessionStorage.getItem("art5") + " " +
         parseFloat(sessionStorage.getItem("preis4")) + "€" + "\n" + " _____________________" + "\n" + gesammt + "€";
     divauswahl.appendChild(divvorhanden);
+    serverantwort("https://gis-communication.herokuapp.com");
 }
 //# sourceMappingURL=script.js.map
