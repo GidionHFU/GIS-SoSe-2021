@@ -36,3 +36,9 @@ interface Allemöglichkeiten {
     topping: Topping[];
     eis: Eis [];
 }
+
+interface Serverobj {
+    error: string;
+    message: string;
+    
+}

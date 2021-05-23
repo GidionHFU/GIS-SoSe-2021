@@ -77,6 +77,9 @@ a {
     align-self: center;
     border-radius:40px 40px 40px 40px;
 }
+.Waffel button:focus {
+    background-color: rgb(255, 255, 255);
+}
 .Waffel p {
     text-align: center;
 }
@@ -97,4 +100,10 @@ a {
     display: flex;
     justify-content: center;
     margin-left: 160px;
+}
+.rückgabegut{
+    color: teal;
+}
+.rückgabeschlecht{
+    color: red;
 }
