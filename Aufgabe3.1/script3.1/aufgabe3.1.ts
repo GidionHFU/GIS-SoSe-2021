@@ -14,15 +14,8 @@ async function datenschicken(): Promise<void> {
         console.log("name: " + entry[0]); // entry[0] gibt den String des "name-attribute" zurück
         console.log("value: " + entry[1]);  // entry [1] gibt den value FormDataEntryValue zurück. Hier unnötig
     }
-    serverantwort("https://gissosegidionhfu.herokuapp.com/");
-}
-
-
-
-
-
-async function serverantwort(_url: RequestInfo): Promise<void> {  
-    let query: URLSearchParams = new URLSearchParams(<any>FormData);
+    let query: URLSearchParams = new URLSearchParams(<any>data);
+    let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort: Response = await fetch(_url);
@@ -30,5 +23,14 @@ async function serverantwort(_url: RequestInfo): Promise<void> {
     let antwortparagraph: HTMLDivElement = document.createElement("div");
     antwortparagraph.innerText = rückgabe;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
+
 }
+
+
+
+
+
+
+
+
 
