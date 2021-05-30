@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.label {
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+.labelinside {
+    display: block;
+    transition: all 0.3s;
+}
+.kontaktinput {
+    
+    transition: all 0.5s;
+}
+.kontaktinput::placeholder {
+    color: transparent;
+}
+.kontaktinput:focus{
+    box-shadow: none;
+    outline: none;
+    border-color: chocolate; 
+}
+.label:focus-within {
+    transform:scale(1.1, 1.1);
+}
+.klick {
+    color: black;
+}
+mark{
+    color: red;
+    background: none;
+}
+fieldset p {
+    font-size: 10px;
+    color: grey;
+}
+fieldset {
+    width: 60px;
+    margin:auto;
+    text-align: center;
+}
