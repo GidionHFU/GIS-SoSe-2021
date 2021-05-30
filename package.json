@@ -1,13 +1,10 @@
 {
-  "dependencies": {
-    "@types/node": "^15.6.1"
-  },
   "name": "gissosegidion",
   "description": "Moin Moin.",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node Aufgabe 3.1/server/server.js"
+    "start": "node Aufgabe3.1/server/server.js"
   },
   "repository": {
     "type": "git",
