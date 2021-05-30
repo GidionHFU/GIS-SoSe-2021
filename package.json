@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@types/node": "^15.6.1"
+  },
+  "name": "gissosegidion",
+  "description": "Moin Moin.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Aufgabe 3.1/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GidionHFU/GIS-SoSe-2021.git"
+  },
+  "keywords": [
+    "heyho"
+  ],
+  "author": "gidionarifi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GidionHFU/GIS-SoSe-2021/issues"
+  },
+  "homepage": "https://github.com/GidionHFU/GIS-SoSe-2021#readme"
+}
