@@ -7,7 +7,7 @@ async function jsonladen(_url) {
     anzeigenlassen(serverrückgabe);
 }
 jsonladen("https://gidionhfu.github.io/GIS-SoSe-2021/Aufgabe%202.5/data.json");
-async function serverantwort(_url) {
+async function serverantwort1(_url) {
     let query = new URLSearchParams(sessionStorage);
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);

@@ -8,7 +8,7 @@ async function jsonladen(_url: RequestInfo): Promise<void> { //json wird von der
 
 jsonladen("https://gidionhfu.github.io/GIS-SoSe-2021/Aufgabe%202.5/data.json");
 
-async function serverantwort(_url: RequestInfo): Promise<void> { //c) 
+async function serverantwort1(_url: RequestInfo): Promise<void> { //c) 
     let query: URLSearchParams = new URLSearchParams(sessionStorage);
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
