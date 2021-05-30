@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/GidionHFU/GIS-SoSe-2021/issues"
   },
-  "homepage": "https://github.com/GidionHFU/GIS-SoSe-2021#readme"
+  "homepage": "https://github.com/GidionHFU/GIS-SoSe-2021#readme",
+  "devDependencies": {
+    "@types/node": "^15.6.1"
+  }
 }

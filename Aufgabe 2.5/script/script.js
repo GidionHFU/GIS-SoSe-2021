@@ -172,6 +172,6 @@ if ((document.querySelector("title").getAttribute("id") === "Page6")) {
         parseFloat(sessionStorage.getItem("preis4")) + "€" + " \n " + sessionStorage.getItem("art5") + " " +
         parseFloat(sessionStorage.getItem("preis4")) + "€" + "\n" + " _____________________" + "\n" + gesammt + "€";
     divauswahl.appendChild(divvorhanden);
-    serverantwort("https://gis-communication.herokuapp.com");
+    serverantwort1("https://gis-communication.herokuapp.com");
 }
 //# sourceMappingURL=script.js.map

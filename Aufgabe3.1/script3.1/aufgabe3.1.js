@@ -10,10 +10,8 @@ async function datenschicken() {
         console.log("name: " + entry[0]); // entry[0] gibt den String des "name-attribute" zurück
         console.log("value: " + entry[1]); // entry [1] gibt den value FormDataEntryValue zurück. Hier unnötig
     }
-    serverantwort("https://gissosegidionhfu.herokuapp.com/");
-}
-async function serverantwort(_url) {
-    let query = new URLSearchParams(FormData);
+    let query = new URLSearchParams(data);
+    let _url = "https://gissosegidionhfu.herokuapp.com/";
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort = await fetch(_url);
