@@ -1,6 +1,6 @@
 //Aufgabe 3.1
 
-async function datenschicken(): Promise<void> {
+async function datenschicken1(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
     console.log("Daten:" + data.get("name"));
     for (let entry of data) {
@@ -22,8 +22,8 @@ async function datenschicken(): Promise<void> {
 
 
 
-let btn: HTMLButtonElement = <HTMLButtonElement> document.getElementById("btn");
-btn.addEventListener("click", datenschicken);
+let btn1: HTMLButtonElement = <HTMLButtonElement> document.getElementById("btn");
+btn1.addEventListener("click", datenschicken1);
 
 
 

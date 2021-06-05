@@ -1,6 +1,6 @@
 "use strict";
 //Aufgabe 3.1
-async function datenschicken() {
+async function datenschicken1() {
     let data = new FormData(document.forms[0]);
     console.log("Daten:" + data.get("name"));
     for (let entry of data) {
@@ -18,6 +18,6 @@ async function datenschicken() {
     antwortparagraph.innerText = rückgabe;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
-let btn = document.getElementById("btn");
-btn.addEventListener("click", datenschicken);
+let btn1 = document.getElementById("btn");
+btn1.addEventListener("click", datenschicken1);
 //# sourceMappingURL=aufgabe3.1.js.map
