@@ -24,7 +24,7 @@ async function datenschickenjson() {
     let antwort = await fetch(_url);
     let rückgabe = await antwort.json();
     let antwortparagraph = document.createElement("div");
-    antwortparagraph.innerText = rückgabe.email + rückgabe.username + rückgabe.pw + rückgabe.pwbestätigt + rückgabe.biographie;
+    antwortparagraph.innerText = rückgabe.email + "  |  " + rückgabe.username + "  |  " + rückgabe.pw + "  |  " + rückgabe.pwbestätigt + "  |  " + rückgabe.biographie;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
 let btnhtml = document.getElementById("btnhtml");

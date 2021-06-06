@@ -33,7 +33,7 @@ async function datenschickenjson(): Promise<void> {
     let antwort: Response = await fetch(_url);
     let rückgabe: JsonObjConvert = await antwort.json();
     let antwortparagraph: HTMLDivElement = document.createElement("div");
-    antwortparagraph.innerText = rückgabe.email + rückgabe.username + rückgabe.pw + rückgabe.pwbestätigt + rückgabe.biographie;
+    antwortparagraph.innerText = rückgabe.email + "  |  " + rückgabe.username + "  |  " + rückgabe.pw + "  |  " + rückgabe.pwbestätigt + "  |  " + rückgabe.biographie;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
 
