@@ -3,8 +3,7 @@ async function datenschickenhtml() {
     let data = new FormData(document.forms[0]);
     console.log("Daten:" + data.get("name"));
     let query = new URLSearchParams(data);
-    //let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
-    let _url = "http://localhost:8100";
+    let _url = "https://gissosegidionhfu.herokuapp.com/";
     _url = _url + "/SendInHtml";
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
@@ -18,8 +17,7 @@ async function datenschickenjson() {
     let data = new FormData(document.forms[0]);
     console.log("Daten:" + data.get("name"));
     let query = new URLSearchParams(data);
-    //let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
-    let _url = "http://localhost:8100";
+    let _url = "https://gissosegidionhfu.herokuapp.com/";
     _url = _url + "/sendInJsonString";
     _url = _url + "?" + query.toString();
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);

@@ -11,7 +11,6 @@ async function datenschickenhtml(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
     console.log("Daten:" + data.get("name"));
     let query: URLSearchParams = new URLSearchParams(<any>data);
-    //let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
     let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
     _url = _url + "/SendInHtml";
     _url = _url + "?" + query.toString();
@@ -27,7 +26,6 @@ async function datenschickenjson(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
     console.log("Daten:" + data.get("name"));
     let query: URLSearchParams = new URLSearchParams(<any>data);
-    //let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
     let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com/";
     _url = _url + "/sendInJsonString";
     _url = _url + "?" + query.toString();
