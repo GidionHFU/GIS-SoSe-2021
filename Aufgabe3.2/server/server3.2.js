@@ -27,7 +27,7 @@ var P_3_2Server;
             let path = url.pathname;
             if (path === "/SendInHtml")
                 for (let key in url.query) {
-                    _response.write(key + ":" + url.query[key] + "<br\>");
+                    _response.write(key + ":" + url.query[key] + " <br\> ");
                 }
             else if (path === "/sendInJsonString") {
                 let jsonString = JSON.stringify(url.query);
