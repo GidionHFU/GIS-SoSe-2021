@@ -25,7 +25,7 @@ export namespace P_3_2Server {
 
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
-            let path: string = url.pathname;
+            let path: string = <string> url.pathname;
             if (path === "/SendInHtml")
                 for (let key in url.query) {
                     _response.write(key + ":" + url.query[key] + " <br/> ");
