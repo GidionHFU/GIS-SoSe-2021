@@ -1,7 +1,6 @@
 "use strict";
 async function datenschickenhtml() {
     let data = new FormData(document.forms[0]);
-    console.log("Daten:" + data.get("name"));
     let query = new URLSearchParams(data);
     let _url = "https://gissosegidionhfu.herokuapp.com";
     _url = _url + "/SendInHtml";
@@ -15,7 +14,6 @@ async function datenschickenhtml() {
 }
 async function datenschickenjson() {
     let data = new FormData(document.forms[0]);
-    console.log("Daten:" + data.get("name"));
     let query = new URLSearchParams(data);
     let _url = "https://gissosegidionhfu.herokuapp.com";
     _url = _url + "/sendInJsonString";
@@ -23,12 +21,9 @@ async function datenschickenjson() {
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort = await fetch(_url);
     let rückgabe = await antwort.json();
-    let antwortparagraph = document.createElement("div");
-    antwortparagraph.innerText = rückgabe.email + "  |  " + rückgabe.username + "  |  " + rückgabe.pw + "  |  " + rückgabe.pwbestätigt + "  |  " + rückgabe.biographie;
-    document.getElementById("ausgewählt").appendChild(antwortparagraph);
+    console.log(rückgabe);
 }
-let btnhtml = document.getElementById("btnhtml");
-btnhtml.addEventListener("click", datenschickenhtml);
-let btnJSON = document.getElementById("btnJSON");
-btnJSON.addEventListener("click", datenschickenjson);
+document.getElementById("btnhtml").addEventListener("click", datenschickenhtml);
+document.getElementById("btnJSON").addEventListener("click", datenschickenjson);
+//xd
 //# sourceMappingURL=aufgabe3.2.js.map

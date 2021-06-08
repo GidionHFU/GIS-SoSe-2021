@@ -9,7 +9,6 @@ interface JsonObjConvert {
 
 async function datenschickenhtml(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
-    console.log("Daten:" + data.get("name"));
     let query: URLSearchParams = new URLSearchParams(<any>data);
     let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com";
     _url = _url + "/SendInHtml";
@@ -24,7 +23,6 @@ async function datenschickenhtml(): Promise<void> {
 
 async function datenschickenjson(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
-    console.log("Daten:" + data.get("name"));
     let query: URLSearchParams = new URLSearchParams(<any>data);
     let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com";
     _url = _url + "/sendInJsonString";
@@ -32,17 +30,14 @@ async function datenschickenjson(): Promise<void> {
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort: Response = await fetch(_url);
     let rückgabe: JsonObjConvert = await antwort.json();
-    let antwortparagraph: HTMLDivElement = document.createElement("div");
-    antwortparagraph.innerText = rückgabe.email + "  |  " + rückgabe.username + "  |  " + rückgabe.pw + "  |  " + rückgabe.pwbestätigt + "  |  " + rückgabe.biographie;
-    document.getElementById("ausgewählt").appendChild(antwortparagraph);
+    console.log(rückgabe);
+    
 }
 
-let btnhtml: HTMLButtonElement = <HTMLButtonElement> document.getElementById("btnhtml");
-btnhtml.addEventListener("click", datenschickenhtml);
-let btnJSON: HTMLButtonElement = <HTMLButtonElement> document.getElementById("btnJSON");
-btnJSON.addEventListener("click", datenschickenjson);
+document.getElementById("btnhtml").addEventListener("click", datenschickenhtml);
+document.getElementById("btnJSON").addEventListener("click", datenschickenjson);
 
-
+//xd
 
 
 
