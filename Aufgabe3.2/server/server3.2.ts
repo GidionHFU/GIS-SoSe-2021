@@ -28,7 +28,7 @@ export namespace P_3_2Server {
             let path: string = url.pathname;
             if (path === "/SendInHtml")
                 for (let key in url.query) {
-                    _response.write(key + ":" + url.query[key] + " <br\> ");
+                    _response.write(key + ":" + url.query[key] + " <br/> ");
                 }
             else if (path === "/sendInJsonString") {
                 let jsonString: string = JSON.stringify(url.query);
