@@ -8,7 +8,7 @@ async function datenschickenhtml() {
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort = await fetch(_url);
     let rückgabe = await antwort.text();
-    let antwortparagraph = document.createElement("div");
+    let antwortparagraph = document.createElement("p");
     antwortparagraph.innerText = rückgabe;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }

@@ -16,7 +16,7 @@ async function datenschickenhtml(): Promise<void> {
     console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort: Response = await fetch(_url);
     let rückgabe: string = await antwort.text();
-    let antwortparagraph: HTMLDivElement = document.createElement("div");
+    let antwortparagraph: HTMLParagraphElement = document.createElement("p");
     antwortparagraph.innerText = rückgabe;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
