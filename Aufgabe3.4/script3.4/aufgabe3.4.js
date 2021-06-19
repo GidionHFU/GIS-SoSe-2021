@@ -1,31 +1,26 @@
 "use strict";
-//Aufgabe 3.2
-async function datenschickenMongo() {
-    let data = new FormData(document.forms[0]);
-    let query = new URLSearchParams(data);
-    let _url = "https://gissosegidionhfu.herokuapp.com";
-    _url = _url + "/SendMongo";
-    _url = _url + "?" + query.toString();
-    console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
-    let antwort = await fetch(_url);
-    let rückgabe = await antwort.text();
-    let antwortparagraph = document.createElement("p");
-    antwortparagraph.innerText = rückgabe;
-    document.getElementById("ausgewählt").appendChild(antwortparagraph);
-    console.log(rückgabe + "wurde verschickt");
-}
+//Aufgabe 3.4
 async function datenempfangenMongo() {
     let data = new FormData(document.forms[0]);
     let query = new URLSearchParams(data);
     let _url = "https://gissosegidionhfu.herokuapp.com";
     _url = _url + "/GetMongo";
     _url = _url + "?" + query.toString();
-    console.log("Ihre Auswahl wurde an die folgende Url geschickt:  " + _url);
     let antwort = await fetch(_url);
-    let rückgabe = await antwort.text();
+    let rückgabe = await antwort.json();
     let antwortparagraph = document.createElement("p");
-    antwortparagraph.innerText = rückgabe;
+    antwortparagraph.innerText = JSON.stringify(rückgabe);
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
+}
+async function datenschickenMongo() {
+    let data = new FormData(document.forms[0]);
+    let query = new URLSearchParams(data);
+    let _url = "https://gissosegidionhfu.herokuapp.com";
+    _url = _url + "/SendMongo";
+    _url = _url + "?" + query.toString();
+    let antwort = await fetch(_url);
+    let rückgabe = await antwort.json();
+    console.log(rückgabe);
 }
 document.getElementById("btnschicken").addEventListener("click", datenschickenMongo);
 document.getElementById("btnempfangen").addEventListener("click", datenempfangenMongo);
