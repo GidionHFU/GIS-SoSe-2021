@@ -9,9 +9,10 @@ async function datenempfangenMongo(): Promise<void> {
     _url = _url + "/empfangen";
     _url = _url + "?" + query.toString();
     let antwort: Response = await fetch(_url);
-    let rückgabe: string = await antwort.json();
+    let rückgabe: JsonObjConvert = await antwort.json();
+    let rückgabenstring: string = JSON.stringify(rückgabe);
     let antwortparagraph: HTMLParagraphElement = document.createElement("p");
-    antwortparagraph.innerText = rückgabe;
+    antwortparagraph.innerText = rückgabenstring;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
 async function datenschickenMongo(): Promise<void> {
