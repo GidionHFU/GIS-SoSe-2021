@@ -1,7 +1,6 @@
 import * as Mongo from "mongodb";
 import * as Http from "http";
 import * as Url from "url";
-import { url } from "inspector";
 
 interface JsonObjConvert {
     email: string;
@@ -49,22 +48,21 @@ export namespace P_3_2Server {
             let newurl: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let path: string = newurl.pathname;
             let user: JsonObjConvert = {    //fix by https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string/57062363#57062363
-                email: newurl.query.email as string,
+                email: newurl.query.email as string, //Obj für Ausgabe
                 username: newurl.query.username as string,
                 pw: newurl.query.pw as string,
                 pwbestätigt: newurl.query.pwbestätigt as string,
                 biographie: newurl.query.biographie as string
             };
 
-            if (path === "/senden") {
-                let jsonstring: string = JSON.stringify(newurl.query)
+            if (path === "/senden") { //Angelegter user wird in Datenbank gespeichert
                 sendtomongo(user);
             }
 
-            else if (path === "/empfangen") {
-                let rückgabe: JsonObjConvert[] = await getMongoDatabase();
-                console.log("worked");
-                _response.write(JSON.stringify(rückgabe));
+            else if (path === "/empfangen") { //User werden aus Datenbank ausgelesen
+                let rückgabe: JsonObjConvert[] = await getMongoDatabase(); //Json array mit den Usern kommt zurück und wird gespeichert
+                console.log("worked"); //wird auf dem Heroku Server angezeigt 
+                _response.write(JSON.stringify(rückgabe)); 
 
             }
         }

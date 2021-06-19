@@ -33,13 +33,12 @@ var P_3_2Server;
                 pwbestätigt: newurl.query.pwbestätigt,
                 biographie: newurl.query.biographie
             };
-            if (path === "/senden") {
-                let jsonstring = JSON.stringify(newurl.query);
+            if (path === "/senden") { //Angelegter user wird in Datenbank gespeichert
                 sendtomongo(user);
             }
-            else if (path === "/empfangen") {
-                let rückgabe = await getMongoDatabase();
-                console.log("worked");
+            else if (path === "/empfangen") { //User werden aus Datenbank ausgelesen
+                let rückgabe = await getMongoDatabase(); //Json array mit den Usern kommt zurück und wird gespeichert
+                console.log("worked"); //wird auf dem Heroku Server angezeigt 
                 _response.write(JSON.stringify(rückgabe));
             }
         }
