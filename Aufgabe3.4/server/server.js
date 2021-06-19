@@ -62,4 +62,4 @@ var P_3_2Server;
         return ausgabe;
     }
 })(P_3_2Server = exports.P_3_2Server || (exports.P_3_2Server = {}));
-//# sourceMappingURL=mongo.js.map
+//# sourceMappingURL=server.js.map
