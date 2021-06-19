@@ -6,7 +6,7 @@ async function datenempfangenMongo(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
     let query: URLSearchParams = new URLSearchParams(<any>data);
     let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com";
-    _url = _url + "/GetMongo";
+    _url = _url + "/empfangen";
     _url = _url + "?" + query.toString();
     let antwort: Response = await fetch(_url);
     let rückgabe: string = await antwort.text();
@@ -18,7 +18,7 @@ async function datenschickenMongo(): Promise<void> {
     let data: FormData = new FormData(document.forms[0]);
     let query: URLSearchParams = new URLSearchParams(<any>data);
     let _url: RequestInfo = "https://gissosegidionhfu.herokuapp.com";
-    _url = _url + "/SendMongo";
+    _url = _url + "/senden";
     _url = _url + "?" + query.toString();
     let antwort: Response = await fetch(_url);
     let rückgabe: string = await antwort.text();

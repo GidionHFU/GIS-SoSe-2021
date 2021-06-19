@@ -55,15 +55,15 @@ export namespace P_3_2Server {
                 biographie: newurl.query.biographie as string
             };
 
-            if (path === "/SendMongo") {
+            if (path === "/senden") {
                 connectToDatabase(user, databaseUrl);
-                _response.write(JSON.stringify(user));
+                _response.write(user);
             }
 
-            else if (path === "/GetMongo") {
+            else if (path === "/empfangen") {
                 let rückgabe: JsonObjConvert[] = await getMongoDatabase(databaseUrl);
                 console.log(rückgabe);
-                _response.write(rückgabe);
+                _response.write(JSON.stringify(rückgabe));
 
             }
         }

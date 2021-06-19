@@ -33,14 +33,14 @@ var P_3_2Server;
                 pwbestätigt: newurl.query.pwbestätigt,
                 biographie: newurl.query.biographie
             };
-            if (path === "/SendMongo") {
+            if (path === "/senden") {
                 connectToDatabase(user, databaseUrl);
-                _response.write(JSON.stringify(user));
+                _response.write(user);
             }
-            else if (path === "/GetMongo") {
+            else if (path === "/empfangen") {
                 let rückgabe = await getMongoDatabase(databaseUrl);
                 console.log(rückgabe);
-                _response.write(rückgabe);
+                _response.write(JSON.stringify(rückgabe));
             }
         }
         _response.end();
