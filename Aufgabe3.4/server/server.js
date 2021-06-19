@@ -27,7 +27,6 @@ var P_3_2Server;
             let newurl = Url.parse(_request.url, true);
             let path = newurl.pathname;
             let user = {
-                id: newurl.query.id,
                 email: newurl.query.email,
                 username: newurl.query.username,
                 pw: newurl.query.pw,
