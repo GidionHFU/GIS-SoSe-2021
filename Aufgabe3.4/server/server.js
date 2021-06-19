@@ -7,7 +7,7 @@ const Url = require("url");
 var P_3_2Server;
 (function (P_3_2Server) {
     //let databaseUrl: string = "mongodb://localhost:27017";
-    let databaseUrl = "mongodb+srv://tutuser:tutuser1@gis-gidion-sose.sf2g7.mongodb.net/User?retryWrites=true&w=majority";
+    let databaseUrl = "mongodb+srv://tutuser:tutuser1@gis-gidion-sose.sf2g7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
     console.log("Starting server"); //Ausgabe in der Konsole wenn der Server gestartet wird
     let port = Number(process.env.PORT); //schaut ob ein Port gesetz ist
     if (!port) // wenn kein port gesetzt ist, ist der Port 8100

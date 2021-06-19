@@ -13,7 +13,7 @@ interface JsonObjConvert {
 export namespace P_3_2Server {
 
     //let databaseUrl: string = "mongodb://localhost:27017";
-    let databaseUrl: string = "mongodb+srv://tutuser:tutuser1@gis-gidion-sose.sf2g7.mongodb.net/User?retryWrites=true&w=majority";
+    let databaseUrl: string = "mongodb+srv://tutuser:tutuser1@gis-gidion-sose.sf2g7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
     console.log("Starting server"); //Ausgabe in der Konsole wenn der Server gestartet wird
