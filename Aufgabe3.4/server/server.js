@@ -35,26 +35,26 @@ var P_3_2Server;
             };
             if (path === "/senden") {
                 let jsonstring = JSON.stringify(newurl.query);
-                sendtomongo(user, databaseUrl);
+                sendtomongo(user);
             }
             else if (path === "/empfangen") {
-                let rückgabe = await getMongoDatabase(databaseUrl);
-                console.log(rückgabe);
+                let rückgabe = await getMongoDatabase();
+                console.log("worked");
                 _response.write(JSON.stringify(rückgabe));
             }
         }
         _response.end();
     }
-    async function sendtomongo(_Obj, url) {
+    async function sendtomongo(obj) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient = new Mongo.MongoClient(url, options);
+        let mongoClient = new Mongo.MongoClient(databaseUrl, options);
         await mongoClient.connect();
         let orders = mongoClient.db("User").collection("UserInfos");
-        orders.insertOne(_Obj);
+        orders.insertOne(obj);
     }
-    async function getMongoDatabase(_url) {
+    async function getMongoDatabase() {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient = new Mongo.MongoClient(_url, options);
+        let mongoClient = new Mongo.MongoClient(databaseUrl, options);
         await mongoClient.connect();
         let orders = mongoClient.db("User").collection("UserInfos");
         let cursor = orders.find();

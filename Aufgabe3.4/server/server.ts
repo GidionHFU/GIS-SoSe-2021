@@ -1,6 +1,7 @@
 import * as Mongo from "mongodb";
 import * as Http from "http";
 import * as Url from "url";
+import { url } from "inspector";
 
 interface JsonObjConvert {
     email: string;
@@ -57,12 +58,12 @@ export namespace P_3_2Server {
 
             if (path === "/senden") {
                 let jsonstring: string = JSON.stringify(newurl.query)
-                sendtomongo(user, databaseUrl);
+                sendtomongo(user);
             }
 
             else if (path === "/empfangen") {
-                let rückgabe: JsonObjConvert[] = await getMongoDatabase(databaseUrl);
-                console.log(rückgabe);
+                let rückgabe: JsonObjConvert[] = await getMongoDatabase();
+                console.log("worked");
                 _response.write(JSON.stringify(rückgabe));
 
             }
@@ -72,19 +73,19 @@ export namespace P_3_2Server {
 
 
 
-    async function sendtomongo(_Obj: JsonObjConvert, url: string): Promise<void> {
+    async function sendtomongo(obj: JsonObjConvert): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(url, options);
+        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(databaseUrl, options);
         await mongoClient.connect();
         let orders: Mongo.Collection = mongoClient.db("User").collection("UserInfos");
-        orders.insertOne(_Obj);
+        orders.insertOne(obj);
     }
 
 
 
-    async function getMongoDatabase(_url: string): Promise<JsonObjConvert[]> {
+    async function getMongoDatabase(): Promise<JsonObjConvert[]> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
+        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(databaseUrl, options);
         await mongoClient.connect();
         let orders: Mongo.Collection = mongoClient.db("User").collection("UserInfos");
         let cursor: Mongo.Cursor = orders.find();
