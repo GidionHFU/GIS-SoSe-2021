@@ -56,8 +56,8 @@ export namespace P_3_2Server {
             };
 
             if (path === "/senden") {
-                connectToDatabase(user, databaseUrl);
-                _response.write(JSON.stringify(user));
+                let jsonstring: string = JSON.stringify(newurl.query)
+                sendtomongo(user, databaseUrl);
             }
 
             else if (path === "/empfangen") {
@@ -72,7 +72,7 @@ export namespace P_3_2Server {
 
 
 
-    async function connectToDatabase(_Obj: JsonObjConvert, url: string): Promise<void> {
+    async function sendtomongo(_Obj: JsonObjConvert, url: string): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(url, options);
         await mongoClient.connect();

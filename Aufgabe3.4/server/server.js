@@ -34,8 +34,8 @@ var P_3_2Server;
                 biographie: newurl.query.biographie
             };
             if (path === "/senden") {
-                connectToDatabase(user, databaseUrl);
-                _response.write(JSON.stringify(user));
+                let jsonstring = JSON.stringify(newurl.query);
+                sendtomongo(user, databaseUrl);
             }
             else if (path === "/empfangen") {
                 let rückgabe = await getMongoDatabase(databaseUrl);
@@ -45,7 +45,7 @@ var P_3_2Server;
         }
         _response.end();
     }
-    async function connectToDatabase(_Obj, url) {
+    async function sendtomongo(_Obj, url) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(url, options);
         await mongoClient.connect();

@@ -7,7 +7,7 @@ async function datenempfangenMongo() {
     _url = _url + "/empfangen";
     _url = _url + "?" + query.toString();
     let antwort = await fetch(_url);
-    let rückgabe = await antwort.text();
+    let rückgabe = await antwort.json();
     let antwortparagraph = document.createElement("p");
     antwortparagraph.innerText = rückgabe;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
