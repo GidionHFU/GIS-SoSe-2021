@@ -34,7 +34,7 @@ var P_3_2Server;
                 biographie: newurl.query.biographie
             };
             if (path === "/SendMongo") {
-                connectToDatabase(user);
+                connectToDatabase(user, databaseUrl);
                 _response.write(JSON.stringify(user));
             }
             else if (path === "/GetMongo") {
@@ -43,17 +43,16 @@ var P_3_2Server;
         }
         _response.end();
     }
-    async function connectToDatabase(_Obj) {
+    async function connectToDatabase(_Obj, url) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient = new Mongo.MongoClient(databaseUrl, options);
+        let mongoClient = new Mongo.MongoClient(url, options);
         await mongoClient.connect();
         let orders = mongoClient.db("User").collection("UserInfos");
         orders.insertOne(_Obj);
-        console.log("Database connection ", orders != undefined);
     }
-    async function getMongoDatabase() {
+    async function getMongoDatabase(_url) {
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient = new Mongo.MongoClient(databaseUrl, options);
+        let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
         let orders = mongoClient.db("User").collection("UserInfos");
         let cursor = orders.find();

@@ -56,7 +56,7 @@ export namespace P_3_2Server {
             };
 
             if (path === "/SendMongo") {
-                connectToDatabase(user);
+                connectToDatabase(user, databaseUrl);
                 _response.write(JSON.stringify(user));
             }
 
@@ -70,20 +70,19 @@ export namespace P_3_2Server {
 
 
 
-    async function connectToDatabase(_Obj: JsonObjConvert): Promise<void> {
+    async function connectToDatabase(_Obj: JsonObjConvert, url: string): Promise<void> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(databaseUrl, options);
+        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(url, options);
         await mongoClient.connect();
         let orders: Mongo.Collection = mongoClient.db("User").collection("UserInfos");
         orders.insertOne(_Obj);
-        console.log("Database connection ", orders != undefined);
     }
 
 
 
-    async function getMongoDatabase(): Promise<JsonObjConvert[]> {
+    async function getMongoDatabase(_url: string): Promise<JsonObjConvert[]> {
         let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(databaseUrl, options);
+        let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
         let orders: Mongo.Collection = mongoClient.db("User").collection("UserInfos");
         let cursor: Mongo.Cursor = orders.find();
