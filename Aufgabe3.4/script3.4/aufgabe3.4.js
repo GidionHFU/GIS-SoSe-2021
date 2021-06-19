@@ -7,9 +7,9 @@ async function datenempfangenMongo() {
     _url = _url + "/GetMongo";
     _url = _url + "?" + query.toString();
     let antwort = await fetch(_url);
-    let rückgabe = await antwort.json();
+    let rückgabe = await antwort.text();
     let antwortparagraph = document.createElement("p");
-    antwortparagraph.innerText = JSON.stringify(rückgabe);
+    antwortparagraph.innerText = rückgabe;
     document.getElementById("ausgewählt").appendChild(antwortparagraph);
 }
 async function datenschickenMongo() {
@@ -19,7 +19,7 @@ async function datenschickenMongo() {
     _url = _url + "/SendMongo";
     _url = _url + "?" + query.toString();
     let antwort = await fetch(_url);
-    let rückgabe = await antwort.json();
+    let rückgabe = await antwort.text();
     console.log(rückgabe);
 }
 document.getElementById("btnschicken").addEventListener("click", datenschickenMongo);
