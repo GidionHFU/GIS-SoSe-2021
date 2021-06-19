@@ -21,5 +21,9 @@
   "homepage": "https://github.com/GidionHFU/GIS-SoSe-2021#readme",
   "devDependencies": {
     "@types/node": "^15.6.1"
+  },
+  "dependencies": {
+    "@types/mongodb": "^3.6.18",
+    "mongodb": "^3.6.9"
   }
 }

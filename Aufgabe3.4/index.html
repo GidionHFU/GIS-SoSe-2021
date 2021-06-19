@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script3.4/aufgabe3.2.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Daten eingeben</legend>                  
+            <div class="label">
+                <label class="labelinside" for="email">E-Mail: <mark class="red">!</mark></label>
+                <input class="kontaktinput" type="email" name="email"  required><br> <!-- name ist ausschlaggebend für "Formularelemente" | Required gibt an, dass das Feldausgefüllt sein muss -->
+            </div>
+            <div class="label">
+                <label class="labelinside" for="username">Vollständiger Name / Benutzername: <mark class="red">!</mark></label>
+                <input class="kontaktinput" type="text" name="username"  required><br>
+            </div>
+            <div class="label">
+                <label for="pw" class="labelinside">Passwort: <mark class="red">!</mark></label>
+                <input class="kontaktinput" type="password" name="pw"  required>
+            </div>
+            <div class="label">
+                <label for="pwbestätigt" class="labelinside">Passwort bestätigen: <mark class="red">!</mark></label>
+                <input class="kontaktinput" type="password" name="pwbestätigt"  required>
+            </div><br>
+            <div class="label">
+                <label for="biographie" class="labelinside">Biographie:</label>
+                <textarea class="kontaktinput" name="biographie" cols="30" rows="7"></textarea>
+            </div> <br>
+            <p id="agb">Durch die Registrierung stimmst du unseren Nutzungsbedingungen zu. <br> In unserer Datenrichtlinie erfährst du, wie wir deine Daten erfassen, verwenden und teilen. <br> Unsere Cookie-Richtlinie erklärt, wie wir Cookies und ähnliche Technologien verwenden.</p>
+            <button id="btnschicken" type="button"> An DB schicken</button> <br>
+            <button id="btnempfangen" type="button"> Von DB auslesen</button> <br>
+            <a href="" class="klick">Passwort vergessen?</a><br>
+            <a href="" class="klick">Noch keinen Account?</a>
+        </fieldset>
+    </form>
+    <fieldset>
+        <div id="ausgewählt"></div>
+    </fieldset>
+</body>
+
+</html>
