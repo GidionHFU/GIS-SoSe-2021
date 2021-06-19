@@ -3,11 +3,11 @@ import * as Http from "http";
 import * as Url from "url";
 
 interface JsonObjConvert {
-    email?: string;
-    username?: string;
-    pw?: string;
-    pwbestätigt?: string;
-    biographie?: string;
+    email: string;
+    username: string;
+    pw: string;
+    pwbestätigt: string;
+    biographie: string;
 }
 
 export namespace P_3_2Server {
