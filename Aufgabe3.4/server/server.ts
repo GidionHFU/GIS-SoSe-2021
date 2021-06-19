@@ -63,7 +63,7 @@ export namespace P_3_2Server {
             }
 
             else if (path === "/GetMongo") {
-                _response.write(JSON.stringify(getMongoDatabase));
+                _response.write(await JSON.stringify(getMongoDatabase));
 
             }
         }

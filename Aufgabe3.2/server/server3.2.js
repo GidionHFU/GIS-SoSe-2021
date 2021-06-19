@@ -25,9 +25,11 @@ var P_3_2Server;
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             let path = url.pathname;
-            if (path === "/GetMongo")
-                ;
-            else if (path === "/SendMongo") {
+            if (path === "/SendInHtml")
+                for (let key in url.query) {
+                    _response.write(key + ":" + url.query[key] + " | ");
+                }
+            else if (path === "/sendInJsonString") {
                 let jsonString = JSON.stringify(url.query);
                 _response.write(jsonString);
             }
