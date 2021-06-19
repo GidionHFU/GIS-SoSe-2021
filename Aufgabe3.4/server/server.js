@@ -35,7 +35,7 @@ var P_3_2Server;
             };
             if (path === "/senden") {
                 connectToDatabase(user, databaseUrl);
-                _response.write(user);
+                _response.write(JSON.stringify(user));
             }
             else if (path === "/empfangen") {
                 let rückgabe = await getMongoDatabase(databaseUrl);
