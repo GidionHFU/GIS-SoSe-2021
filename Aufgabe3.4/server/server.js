@@ -38,7 +38,7 @@ var P_3_2Server;
                 _response.write(JSON.stringify(user));
             }
             else if (path === "/GetMongo") {
-                _response.write(await JSON.stringify(getMongoDatabase));
+                _response.write(await JSON.stringify(getMongoDatabase(databaseUrl)));
             }
         }
         _response.end();
